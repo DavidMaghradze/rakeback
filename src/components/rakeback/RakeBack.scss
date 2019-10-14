@@ -1,0 +1,60 @@
+.rakeback {
+    margin-top: 120px;
+
+    .container {
+        background: url('/img/rakeback-bg.png');
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+    }
+
+    &__wrapper {
+        padding: 100px 60px 50px 120px;
+        color: #fefefe;
+        font-size: 18px;
+        position: relative;
+
+        > button {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -25px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1.5fr 2.5fr;
+        grid-gap: 40px
+    }
+
+    &__steps {
+        margin-top: 30px;
+    }
+
+    &__step {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__step-title {
+        font-size: 36px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -41px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 31px;
+            height: 1px;
+            background: #e84e0f;
+        }
+    }
+
+    &__step-instruction {
+        color: #e96402;
+    }
+}

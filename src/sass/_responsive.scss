@@ -1,0 +1,294 @@
+@media(max-width: 1266px) {
+    .container--large {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .banner-text {
+        max-width: 316px;
+
+        &__title {
+            font-size: 36px;
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+
+    .rakeback {
+
+        &__wrapper {
+            padding-left: 80px;
+        }
+
+        &__step {
+            font-size: 16px;
+        }
+
+        &__step-title {
+            font-size: 24px;
+        }
+
+        &__footer {
+            padding: 25px 10px;
+        }
+    }
+
+    .example {
+        &__description {
+            margin-left: 50px;
+        }
+    }
+}
+
+@media(max-width: 1023px) {
+
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #banner {
+        height: 1700px;
+        background-position-x: 77%;
+    }
+
+    .banner-text {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 320px;
+    }
+
+    .rakeback {
+        margin-top: 20px;
+
+        .container {
+            background: none;
+        }
+
+        &__wrapper {
+            padding: 0 5px;
+
+            > button {
+                bottom: -70px;
+            }
+        }
+
+        &__grid {
+            grid-template-columns: 1fr;
+        }
+
+        &__steps {
+            text-align: center;
+        }
+
+        &__step-title {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .example {
+        margin-top: 150px;
+
+        .container {
+            background: none;
+        }
+
+        &__grid {
+            display: block;;
+        }
+
+        &__steps {
+            background: #2e3238;
+            text-align: center;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        &__steps-header {
+            justify-content: center;
+        }
+
+        &__step {
+            img {
+                display: none;
+            }
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            > div {
+                font-size: 16px;
+                margin-top: 0;
+            }
+        }
+
+        &__step-level {
+            justify-content: center;
+
+            span {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        &__step-rakeback strong {
+            font-size: 16px;
+        }
+
+        &__description {
+            background: #22252a;
+            margin-left: 0;
+            padding: 30px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            article {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .userflow {
+        &__user::before {
+            display: none;;
+        }
+    }
+
+    .dice-top, .dice-bottom {
+        display: none;
+    }
+
+    .offers {
+        margin-bottom: 50px;
+
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+
+        .offer {
+            width: 100%;
+            justify-content: center;
+
+            &:first-child {
+                order: 2;
+                margin-top: 60px;
+            }
+
+            article {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media(max-width: 900px) {
+    #banner {
+        height: 1400px;
+        background-position-x: 77%;
+    }
+
+    .banner-text {
+        margin-top: 260px;
+    }
+}
+
+@media(max-width: 767px) {
+
+    #banner {
+        height: 700px;
+        background-position-x: 70%;
+    }
+
+    .banner-text {
+        margin-top: 120px;
+        font-size: 14px;
+
+        &__title {
+            font-size: 24px;
+        }
+    }
+
+    .rakeback {
+        &__status-header, &__timer {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__timer p {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        &-game {
+            padding: 22px 17px;
+        }
+
+        &__formfields {
+            flex-direction: column;
+
+            .field, .field input {
+                width: 90%;
+            }
+
+            .exchange {
+                margin: 10px 0;
+            }
+        }
+    }
+
+    .rakeback-game {
+        &__current-stats {
+            flex-direction: column;
+        }
+
+        &__current-level {
+            margin-bottom: 10px;
+        }
+    }
+
+    .header {
+        padding-top: 0;
+
+        &__lang {
+            padding: 5px;
+
+            img {
+                height: 10px;
+            }
+        }
+    }
+
+    .games {
+        &__grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        .game {
+            width: 330px;
+        }
+    }
+
+    .offers .offer {
+        &__image {
+            margin-right: 20px;
+
+            img {
+                width: 120px;
+            }
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .games {
+        .game {
+            width: 100%;
+        }
+    }
+}

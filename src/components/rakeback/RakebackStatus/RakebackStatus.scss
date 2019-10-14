@@ -1,0 +1,312 @@
+.rakeback {
+    &__description {
+        font-size: 14px;
+        color: #878889;
+        text-align: center;
+
+        span {
+            color: #e84c28;
+        }
+    }
+
+    &__container {
+        width: 100%;
+    }
+
+    &__status-wrapper {
+        margin-top: 15px;
+        background: #2e3238;
+    }
+
+    &__status-header {
+        background: #515456;
+        padding: 25px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__timer {
+        display: flex;
+        align-items: center;
+        color: #cccccc;
+        p {
+            max-width: 165px;
+            font-size: 14px;
+        }
+    }
+
+    &__timer-time {
+        display: flex;
+
+        > div {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #3a3c3f;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            font-size: 12px;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+
+        span {
+            display: block;
+            font-size: 18px;
+            color: #e84c28;
+            margin-bottom: -5px;
+        }
+    }
+
+    &__footer {
+        background: #515456;
+        color: #cccccc;
+        padding: 25px;
+        text-align: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        &-points {
+            font-size: 14px;
+
+            span {
+                color: #e84e0f;
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 20px;
+
+        > button {
+            width: 225px;
+            height: 60px;
+            border-radius: 30px;
+            background: #e84e0f;
+            margin-top: 15px;
+            text-transform: uppercase;
+            color: #fefefe;
+            font-size: 20px;
+        }
+    }
+
+    &__formfields {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .field {
+        width: 220px;
+        height: 60px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #3a3c3f;
+        border-radius: 30px;
+        color: #cccccc;
+        font-size: 14px;
+        position: relative;
+
+        input {
+            border: none;
+            outline: none;
+            background: none;
+            padding: 5px 10px;
+            text-align: center;
+            color: #e84e0f;
+
+            &::placeholder {
+                color: #e84e0f;
+            }
+        }
+
+        span {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            background: #e84e0f;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+    }
+
+    .exchange {
+        img {
+            width: 40px;
+        }
+    }
+}
+
+.rakeback-game {
+    padding: 22px 34px;
+
+    &__current-stats {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__current-level {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-size: 16px;
+            margin-right: 8px;
+            color: #aaaaaa;
+        }
+    }
+
+    &__current-points {
+        font-size: 16px;
+        color: #aaaaaa;
+
+        p span {
+            color: #e84e0f;
+            margin-left: 15px;
+        }
+    }
+
+    &__levels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        position: relative;
+
+        .filled {
+            z-index: 2;
+            background: #38af00;
+            width: 10%;
+        }
+
+        .level {
+            background: #515456;
+            position: relative;
+
+            .tooltip {
+                display: inline-block;
+                background: #878889;
+                width: 40px;
+                padding: 5px;
+                border-radius: 5px;
+                color: #1a1a1a;
+                font-size: 10px;
+                box-shadow: 0 3px 7px rgba(0,0,0,.35);
+                position: absolute;
+                top: -35px;
+                left: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s ease-out;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 5px;
+                    bottom: -6px;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 6px solid #878889;
+                }
+            }
+
+            &:hover {
+                .tooltip {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -20px;
+                left: 10px;
+                transform: translateX(-50%);
+                display: inline-block;
+                width: 2px;
+                height: 14px;
+                border-radius: 5px;
+                background: #515456;
+            }
+        }
+
+        .active {
+            background: #38af00;
+        }
+    }
+
+    &__levels-points {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #aaaaaa;
+        margin-top: 30px;
+
+        span {
+            width: 25px;
+            text-align: center;
+        }
+    }
+
+    &__current-rakeback {
+        text-align: center;
+        margin-top: 20px;
+        color: #fff;
+        font-size: 18px;
+
+        span {
+            color: #848484;
+        }
+    }
+
+    /// //////
+
+    &__progress-bar {
+        margin-top: 10px;
+        width: calc(100% + 5px);
+        height: 6px;
+        background: #515456;
+        border-radius: 5px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__progress {
+        height: 6px;
+        background: #38af00;
+        border-radius: 5px;
+    }
+}
+
+.level-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.points {
+    margin-top: 10px;
+    color: #aaaaaa;
+    font-size: 12px;
+    
+    .point {
+        display: inline-block;
+        width: 20px;
+        text-align: center;
+    }
+}

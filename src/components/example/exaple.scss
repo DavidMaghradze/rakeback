@@ -1,0 +1,111 @@
+.example {
+    margin-top: 115px;
+    .container {
+        background: url('/img/example-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 1060px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    &__title {
+        position: absolute;
+        z-index: 2;
+        font-size: 36px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 214px;
+        height: 46px;
+        top: -23px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #070a14;
+        color: #fff;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__steps {
+        padding: 40px 25px;
+    }
+
+    &__steps-header {
+        display: flex;
+    }
+
+    &__step {
+        color: #e3e3e3;
+
+        > div {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            margin-left: 8px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__step-title {
+        font-size: 14px;
+        text-transform: capitalize;
+        margin-bottom: 8px;
+    }
+
+    &__step-rake {
+        font-size: 24px;
+        margin-top: -4px;
+    }
+
+    &__step-rakeback {
+        font-size: 16px;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        strong {
+            font-weight: normal;
+            font-family: title-fs;
+            font-size: 24px;
+            margin-top: -4px;
+            margin-left: 5px;
+        }
+    }
+
+    &__step-points {
+        font-family: title-fs;
+        font-size: 24px;
+        margin-top: -4px;
+    }
+
+    &__steps-description {
+        font-size: 12px;
+        color: #8a8a8a;
+        margin-top: 20px;
+    }
+
+    &__description {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        article {
+            max-width: 386px;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}

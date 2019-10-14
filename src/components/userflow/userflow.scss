@@ -1,0 +1,90 @@
+.userflow {
+
+    margin-top: 50px;
+    margin-bottom: 55px;
+
+    &__title {
+        max-width: 514px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    &__user {
+        max-width: 347px;
+        margin: 25px auto 0 auto;
+        background: #1b1e20;
+        border-radius: 5px;
+        position: relative;
+        border-bottom: 3px solid #3d4042;
+        box-shadow: 0 8px 8px rgba(0,0,0,.6);
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #1b1e20;
+        }
+    }
+
+    &__user-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    &__user-info {
+        width: 50%;
+        text-align: center;
+    }
+
+    &__user-image {
+        img {
+            width: 52px;
+            height: 56px;
+            object-fit: cover;
+        }
+    }
+
+    &__user-name {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    &__nav {
+
+        width: 50%;
+
+        li {
+            width: 155px;
+            height: 25px;
+            border-radius: 5px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: #c4c6cf;
+            font-size: 14px;
+            transition: .3s ease-out;
+            cursor: pointer;
+
+            &:hover {
+                background: #f05a22;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+
+        .active {
+            background: #f05a22;
+        }
+    }
+}
